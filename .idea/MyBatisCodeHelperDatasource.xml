@@ -4,9 +4,10 @@
     <option name="projectProfile">
       <ProjectProfile>
         <option name="addSerializeUid" value="true" />
+        <option name="generateService" value="true" />
         <option name="javaMapperPackage" value="com.HiSmartHome.mapper" />
         <option name="javaMapperPath" value="$PROJECT_DIR$/src/main/java" />
-        <option name="javaModelPackage" value="com.HiSmartHome.domain" />
+        <option name="javaModelPackage" value="com.HiSmartHome.model" />
         <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
         <option name="lastDatabaseCrudChooseModuleName" value="HiSmartHome_back" />
         <option name="modelAddToString" value="true" />
@@ -17,8 +18,10 @@
                 <UserPackageAndPathInfoByModule>
                   <option name="javaMapperPackage" value="com.HiSmartHome.mapper" />
                   <option name="javaMapperPath" value="$PROJECT_DIR$/src/main/java" />
-                  <option name="javaModelPacakge" value="com.HiSmartHome.domain" />
+                  <option name="javaModelPacakge" value="com.HiSmartHome.model" />
                   <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="javaServicePackage" value="com.HiSmartHome.service" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/src/main/java" />
                   <option name="xmlPackage" value="mapperxml" />
                   <option name="xmlPath" value="$PROJECT_DIR$/src/main/resources" />
                 </UserPackageAndPathInfoByModule>
@@ -33,6 +36,18 @@
                 <TableGenerateConfig>
                   <option name="generatedKey" value="" />
                   <option name="javaModelName" value="User" />
+                  <option name="moduleName" value="HiSmartHome_back" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="aliyun_ecs:users">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="users_id" />
+                  <option name="javaModelName" value="Users" />
                   <option name="moduleName" value="HiSmartHome_back" />
                   <option name="sequenceColumn" value="" />
                   <option name="sequenceId" value="" />
