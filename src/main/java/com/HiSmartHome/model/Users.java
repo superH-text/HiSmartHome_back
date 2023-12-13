@@ -134,4 +134,8 @@ public class Users {
                 ", users_stmp='" + users_stmp + '\'' +
                 '}';
     }
+
+    public Users() {
+        super();
+    }
 }
