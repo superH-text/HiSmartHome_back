@@ -4,4 +4,12 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>DevicersAddServlet</servlet-name>
+        <servlet-class>com.HiSmartHome.servlet.DevicersAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DevicersAddServlet</servlet-name>
+        <url-pattern>DevicersAddServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
