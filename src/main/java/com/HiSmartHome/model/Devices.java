@@ -5,7 +5,7 @@ import java.util.Date;
 public class Devices {
 
     private int device_id;
-    private int device_did;
+    private String device_did;
     private String device_name;
     private String device_type;
     private Date users_cdate;
@@ -13,6 +13,10 @@ public class Devices {
     private int users_id;
     private int brand_id;
     private int room_id;
+
+
+    public Devices() {
+    }
 
     public int getDevice_id() {
         return device_id;
@@ -22,11 +26,11 @@ public class Devices {
         this.device_id = device_id;
     }
 
-    public int getDevice_did() {
+    public String getDevice_did() {
         return device_did;
     }
 
-    public void setDevice_did(int device_did) {
+    public void setDevice_did(String device_did) {
         this.device_did = device_did;
     }
 
@@ -86,7 +90,7 @@ public class Devices {
         this.room_id = room_id;
     }
 
-    public Devices(int device_id, int device_did, String device_name, String device_type, Date users_cdate, String users_stmp, int users_id, int brand_id, int room_id) {
+    public Devices(int device_id, String device_did, String device_name, String device_type, Date users_cdate, String users_stmp, int users_id, int brand_id, int room_id) {
         this.device_id = device_id;
         this.device_did = device_did;
         this.device_name = device_name;
@@ -96,6 +100,19 @@ public class Devices {
         this.users_id = users_id;
         this.brand_id = brand_id;
         this.room_id = room_id;
+    }
+
+    public Devices(String device_did, String device_name, String device_type) {
+        this.device_did = device_did;
+        this.device_name = device_name;
+        this.device_type = device_type;
+    }
+
+    public Devices(int device_id, String device_did, String device_name, String device_type) {
+        this.device_id = device_id;
+        this.device_did = device_did;
+        this.device_name = device_name;
+        this.device_type = device_type;
     }
 
     @Override
