@@ -1,4 +1,4 @@
-package com.HiSmartHome.servlet;
+package com.HiSmartHome.servlet.DevicesServlet;
 
 import com.HiSmartHome.model.Devices;
 import com.HiSmartHome.service.DevicesService;
@@ -7,8 +7,9 @@ import com.google.gson.Gson;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.util.List;
 
-public class DevicersAddServlet extends HttpServlet {
+public class DevicesFindAllServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request,response);
@@ -21,17 +22,9 @@ public class DevicersAddServlet extends HttpServlet {
         response.setCharacterEncoding("utf-8");
 
         DevicesService devicesService = new DevicesService();
-
-        String device_did = request.getParameter("device_did");
-        String device_name = request.getParameter("device_name");
-        String device_type = request.getParameter("device_type");
-
-        Devices devices = new Devices(device_did,device_name,device_type);
-        int i = devicesService.addDeviceService(devices);
-
-        if (i>0){
-            response.getWriter().println(new Gson().toJson("添加成功"));
-        }
+        List<Devices> devicesList = devicesService.getAllDevicesService();
+        String json_list = new Gson().toJson(devicesList);
+        response.getWriter().println(json_list);
 
     }
 }

@@ -1,15 +1,14 @@
-package com.HiSmartHome.servlet;
+package com.HiSmartHome.servlet.DevicesServlet;
 
+import com.HiSmartHome.model.Devices;
 import com.HiSmartHome.service.DevicesService;
 import com.google.gson.Gson;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "DevicesDeleteServlet", value = "/DevicesDeleteServlet")
-public class DevicesDeleteServlet extends HttpServlet {
+public class DevicesUpdateServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request,response);
@@ -22,13 +21,17 @@ public class DevicesDeleteServlet extends HttpServlet {
         response.setCharacterEncoding("utf-8");
 
         DevicesService devicesService = new DevicesService();
+        //修改操作
+        String device_id = request.getParameter("device_id");
+        String device_did = request.getParameter("device_did");
+        String device_name = request.getParameter("device_name");
+        String device_type = request.getParameter("device_type");
+        Devices devices = new Devices(Integer.parseInt(device_id), device_did, device_name, device_type);
 
-        String id = request.getParameter("id");
-        System.out.println(id);
-        //执行删除操作
-        int devicesdelete = devicesService.deleteDeviceService(Integer.parseInt(id));
+        int deviceupdate = devicesService.updateDeviceService(devices);
+
         Gson gson = new Gson();
-        String json = gson.toJson(devicesdelete);
+        String json = gson.toJson(deviceupdate);
         response.getWriter().println(json);
     }
 }

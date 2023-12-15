@@ -1,17 +1,13 @@
-package com.HiSmartHome.servlet;
+package com.HiSmartHome.servlet.UserServlet;
 
-import com.HiSmartHome.model.Devices;
 import com.HiSmartHome.service.DevicesService;
 import com.google.gson.Gson;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.List;
 
-@WebServlet(name = "DevicesFindAllServlet", value = "/DevicesFindAllServlet")
-public class DevicesFindAllServlet extends HttpServlet {
+public class UserDelServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request,response);
@@ -24,9 +20,13 @@ public class DevicesFindAllServlet extends HttpServlet {
         response.setCharacterEncoding("utf-8");
 
         DevicesService devicesService = new DevicesService();
-        List<Devices> devicesList = devicesService.getAllDevicesService();
-        String json_list = new Gson().toJson(devicesList);
-        response.getWriter().println(json_list);
 
+        String id = request.getParameter("id");
+        System.out.println(id);
+        //执行删除操作
+        int devicesdelete = devicesService.deleteDeviceService(Integer.parseInt(id));
+        Gson gson = new Gson();
+        String json = gson.toJson(devicesdelete);
+        response.getWriter().println(json);
     }
 }
