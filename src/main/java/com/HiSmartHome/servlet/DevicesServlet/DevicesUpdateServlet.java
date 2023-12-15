@@ -1,12 +1,10 @@
-package com.HiSmartHome.servlet;
+package com.HiSmartHome.servlet.DevicesServlet;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "DevicesDeleteServlet", value = "/DevicesDeleteServlet")
-public class DevicesDeleteServlet extends HttpServlet {
+public class DevicesUpdateServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
