@@ -1,17 +1,21 @@
-package com.HiSmartHome.servlet.DevicesServlet;
+package com.HiSmartHome.servlet.RoomServlet;
 
 import com.HiSmartHome.model.Devices;
+import com.HiSmartHome.model.Room;
 import com.HiSmartHome.service.DevicesService;
+import com.HiSmartHome.service.RoomService;
 import com.google.gson.Gson;
 
-import javax.servlet.*;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name="DevicesFindAllServlet",value="/devicesfindAll")
-public class DevicesFindAllServlet extends HttpServlet {
+@WebServlet(name = "RoomFindAllServlet",value = "roomfindAll")
+public class RoomFindAllServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request,response);
@@ -23,9 +27,9 @@ public class DevicesFindAllServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         response.setCharacterEncoding("utf-8");
 
-        DevicesService devicesService = new DevicesService();
-        List<Devices> devicesList = devicesService.getAllDevicesService();
-        String json_list = new Gson().toJson(devicesList);
+        RoomService roomService = new RoomService();
+        List<Room> roomList = roomService.getAllRoomService();
+        String json_list = new Gson().toJson(roomList);
         response.getWriter().println(json_list);
 
     }

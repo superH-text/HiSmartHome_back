@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@123.57.29.16" uuid="2577aa23-edd1-4658-a82f-456cf246d02b">
+    <data-source source="LOCAL" name="hismarthome@123.57.29.16" uuid="ea4e7de8-56fc-4870-ae4e-bd9ee752d9f3">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://123.57.29.16:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://123.57.29.16:3306/hismarthome</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

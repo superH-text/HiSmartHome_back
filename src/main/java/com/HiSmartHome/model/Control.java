@@ -9,7 +9,7 @@ public class Control {
     private String control_instruction;
     private String control_status;
     private String control_room;
-    private Date control_time;
+    private String control_time;
     private Date control_cdate;
     private String control_stmp;
     private int users_id;
@@ -56,11 +56,11 @@ public class Control {
         this.control_room = control_room;
     }
 
-    public Date getControl_time() {
+    public String getControl_time() {
         return control_time;
     }
 
-    public void setControl_time(Date control_time) {
+    public void setControl_time(String control_time) {
         this.control_time = control_time;
     }
 
@@ -104,7 +104,7 @@ public class Control {
         this.device_id = device_id;
     }
 
-    public Control(int control_id, int control_image, String control_instruction, String control_status, String control_room, Date control_time, Date control_cdate, String control_stmp, int users_id, int room_id, int device_id) {
+    public Control(int control_id, int control_image, String control_instruction, String control_status, String control_room, String control_time, Date control_cdate, String control_stmp, int users_id, int room_id, int device_id) {
         this.control_id = control_id;
         this.control_image = control_image;
         this.control_instruction = control_instruction;
@@ -116,6 +116,21 @@ public class Control {
         this.users_id = users_id;
         this.room_id = room_id;
         this.device_id = device_id;
+    }
+
+    public Control(int control_image, String control_instruction, String control_status, String control_time) {
+        this.control_image = control_image;
+        this.control_instruction = control_instruction;
+        this.control_status = control_status;
+        this.control_time = control_time;
+    }
+
+    public Control(int control_id, int control_image, String control_instruction, String control_status, String control_time) {
+        this.control_id = control_id;
+        this.control_image = control_image;
+        this.control_instruction = control_instruction;
+        this.control_status = control_status;
+        this.control_time = control_time;
     }
 
     @Override

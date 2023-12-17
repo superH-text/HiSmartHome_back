@@ -68,6 +68,19 @@ public class Room {
         this.room_stmp = room_stmp;
     }
 
+    public Room(int room_rid, String room_name, String room_type) {
+        this.room_rid = room_rid;
+        this.room_name = room_name;
+        this.room_type = room_type;
+    }
+
+    public Room(int room_id, int room_rid, String room_name, String room_type) {
+        this.room_id = room_id;
+        this.room_rid = room_rid;
+        this.room_name = room_name;
+        this.room_type = room_type;
+    }
+
     @Override
     public String toString() {
         return "Room{" +
