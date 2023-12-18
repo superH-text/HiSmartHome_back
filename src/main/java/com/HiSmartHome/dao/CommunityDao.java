@@ -61,7 +61,7 @@ public class CommunityDao {
         int community_update = 0;
         try {
             community_update = queryRunner.update(
-                    "update community set community_id=?,community_title=?,community_info=? where device_id=?",
+                    "update community set community_title=?,community_info=? where community_id=?",
                     community.getCommunity_id(),community.getCommunity_title(),community.getCommunity_info()
             );
         } catch (SQLException e) {

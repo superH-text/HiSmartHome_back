@@ -2,7 +2,7 @@ package com.HiSmartHome.service;
 
 import com.HiSmartHome.dao.CommunityDao;
 import com.HiSmartHome.model.Community;
-import com.HiSmartHome.model.Devices;
+
 
 import java.util.List;
 

@@ -31,7 +31,7 @@ public class CommunityUpdateServlet extends HttpServlet {
         String community_id = request.getParameter("community_id");
         String community_title = request.getParameter("community_title");
         String community_info = request.getParameter("community_info");
-        Community community = new Community(community_id, community_title, community_info);
+        Community community = new Community(Integer.parseInt(community_id), community_title, community_info);
 
         int communityupdate = communityService.updateCommunityService(community);
 
