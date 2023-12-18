@@ -68,7 +68,7 @@ public class Community {
         this.users_id = users_id;
     }
 
-    public Community(int community_id, int community_image, String community_title, String community_info, Date community_cdate, String community_stmp, int users_id) {
+    public Community(String community_title, String community_info, String community_stmp) {
         this.community_id = community_id;
         this.community_image = community_image;
         this.community_title = community_title;
