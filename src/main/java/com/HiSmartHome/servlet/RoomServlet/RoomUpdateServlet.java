@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(name = "RoomUpdateServlet",value = "roomupdate")
+@WebServlet(name = "RoomUpdateServlet",value = "/roomupdate")
 public class RoomUpdateServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
