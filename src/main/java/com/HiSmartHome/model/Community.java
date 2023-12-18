@@ -78,6 +78,11 @@ public class Community {
         this.users_id = users_id;
     }
 
+    public Community(String community_title, String community_info) {
+        this.community_title = community_title;
+        this.community_info = community_info;
+    }
+
     @Override
     public String toString() {
         return "Community{" +

@@ -86,6 +86,12 @@ public class Authorization {
         this.devide_id = devide_id;
     }
 
+    public Authorization(String authorization_status, String authorization_starttime, String authorization_endtime) {
+        this.authorization_status = authorization_status;
+        this.authorization_starttime = authorization_starttime;
+        this.authorization_endtime = authorization_endtime;
+    }
+
     @Override
     public String toString() {
         return "Authorization{" +
