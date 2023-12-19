@@ -7,9 +7,9 @@ public class Devices_sdd {
     private int devices_sdd_id;
     private String devices_sdd_info;
     private String devices_sdd_type;
-    private Date devices_sdd_starttime;
-    private Date devices_sdd_endtime;
-    private Date devices_sdd_cdate;
+    private String devices_sdd_starttime;
+    private String devices_sdd_endtime;
+    private String devices_sdd_cdate;
     private String devices_sdd_stmp;
     private int users_id;
     private int device_id;
@@ -38,27 +38,27 @@ public class Devices_sdd {
         this.devices_sdd_type = devices_sdd_type;
     }
 
-    public Date getDevices_sdd_starttime() {
+    public String getDevices_sdd_starttime() {
         return devices_sdd_starttime;
     }
 
-    public void setDevices_sdd_starttime(Date devices_sdd_starttime) {
+    public void setDevices_sdd_starttime(String devices_sdd_starttime) {
         this.devices_sdd_starttime = devices_sdd_starttime;
     }
 
-    public Date getDevices_sdd_endtime() {
+    public String getDevices_sdd_endtime() {
         return devices_sdd_endtime;
     }
 
-    public void setDevices_sdd_endtime(Date devices_sdd_endtime) {
+    public void setDevices_sdd_endtime(String devices_sdd_endtime) {
         this.devices_sdd_endtime = devices_sdd_endtime;
     }
 
-    public Date getDevices_sdd_cdate() {
+    public String getDevices_sdd_cdate() {
         return devices_sdd_cdate;
     }
 
-    public void setDevices_sdd_cdate(Date devices_sdd_cdate) {
+    public void setDevices_sdd_cdate(String devices_sdd_cdate) {
         this.devices_sdd_cdate = devices_sdd_cdate;
     }
 
@@ -86,7 +86,7 @@ public class Devices_sdd {
         this.device_id = device_id;
     }
 
-    public Devices_sdd(int devices_sdd_id, String devices_sdd_info, String devices_sdd_type, Date devices_sdd_starttime, Date devices_sdd_endtime, Date devices_sdd_cdate, String devices_sdd_stmp, int users_id, int device_id) {
+    public Devices_sdd(int devices_sdd_id, String devices_sdd_info, String devices_sdd_type, String devices_sdd_starttime, String devices_sdd_endtime, String devices_sdd_cdate, String devices_sdd_stmp, int users_id, int device_id) {
         this.devices_sdd_id = devices_sdd_id;
         this.devices_sdd_info = devices_sdd_info;
         this.devices_sdd_type = devices_sdd_type;
@@ -96,6 +96,21 @@ public class Devices_sdd {
         this.devices_sdd_stmp = devices_sdd_stmp;
         this.users_id = users_id;
         this.device_id = device_id;
+    }
+
+    public Devices_sdd(String devices_sdd_type, String devices_sdd_starttime, String devices_sdd_endtime,String devices_sdd_info) {
+        this.devices_sdd_type = devices_sdd_type;
+        this.devices_sdd_starttime = devices_sdd_starttime;
+        this.devices_sdd_endtime = devices_sdd_endtime;
+        this.devices_sdd_info = devices_sdd_info;
+    }
+
+    public Devices_sdd(int devices_sdd_id, String devices_sdd_info, String devices_sdd_type, String devices_sdd_starttime, String devices_sdd_endtime) {
+        this.devices_sdd_id = devices_sdd_id;
+        this.devices_sdd_info = devices_sdd_info;
+        this.devices_sdd_type = devices_sdd_type;
+        this.devices_sdd_starttime = devices_sdd_starttime;
+        this.devices_sdd_endtime = devices_sdd_endtime;
     }
 
     @Override
