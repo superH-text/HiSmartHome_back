@@ -28,5 +28,6 @@ public class CommunityFindAllServlet extends HttpServlet {
         List<Community> communityList = communityService.getAllCommunityService();
         String json_list = new Gson().toJson(communityList);
         response.getWriter().println(json_list);
+        System.out.println(communityList);
     }
 }

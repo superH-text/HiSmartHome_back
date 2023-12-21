@@ -33,10 +33,12 @@ public class LoginServlet extends HttpServlet {
 
         LoginService loginService = new LoginService();
 
+        String users_phone = request.getParameter("users_phone");
         String username = request.getParameter("users_username");
         String password = request.getParameter("users_password");
 
         System.out.println(username+"---------"+password);
+        System.out.println(users_phone+"---------"+password);
 
         Users users = loginService.login(username,password);
 

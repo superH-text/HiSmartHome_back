@@ -6,11 +6,20 @@ public class Community {
 
     private int community_id;
     private int community_image;
+    private String community_ip;
     private String community_title;
     private String community_info;
     private Date community_cdate;
     private String community_stmp;
     private int users_id;
+
+    public String getCommunity_ip() {
+        return community_ip;
+    }
+
+    public void setCommunity_ip(String community_ip) {
+        this.community_ip = community_ip;
+    }
 
     public int getCommunity_id() {
         return community_id;
@@ -83,6 +92,12 @@ public class Community {
         this.community_info = community_info;
     }
 
+    public Community(String community_ip, String community_title, String community_info) {
+        this.community_ip = community_ip;
+        this.community_title = community_title;
+        this.community_info = community_info;
+    }
+
     public Community() {
         super();
     }
@@ -92,6 +107,7 @@ public class Community {
         return "Community{" +
                 "community_id=" + community_id +
                 ", community_image=" + community_image +
+                ", community_ip='" + community_ip + '\'' +
                 ", community_title='" + community_title + '\'' +
                 ", community_info='" + community_info + '\'' +
                 ", community_cdate=" + community_cdate +

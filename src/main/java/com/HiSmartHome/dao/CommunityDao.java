@@ -19,8 +19,8 @@ public class CommunityDao {
         int community_add = 0;
         try {
             community_add = queryRunner.update(
-                    "insert into community(community_title,community_info) values (?,?)",
-                    community.getCommunity_title(),community.getCommunity_info()
+                    "insert into community(community_ip,community_title,community_info) values (?,?,?)",
+                    community.getCommunity_ip(),community.getCommunity_title(),community.getCommunity_info()
             );
         } catch (SQLException e) {
             e.printStackTrace();
