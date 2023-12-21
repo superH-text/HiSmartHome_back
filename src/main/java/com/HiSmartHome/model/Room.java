@@ -8,7 +8,7 @@ public class Room {
     private int room_rid;
     private String room_name;
     private String room_type;
-    private Date room_cdate;
+    private String room_cdate;
     private String room_stmp;
 
     public int getRoom_id() {
@@ -43,11 +43,11 @@ public class Room {
         this.room_type = room_type;
     }
 
-    public Date getRoom_cdate() {
+    public String getRoom_cdate() {
         return room_cdate;
     }
 
-    public void setRoom_cdate(Date room_cdate) {
+    public void setRoom_cdate(String room_cdate) {
         this.room_cdate = room_cdate;
     }
 
@@ -59,7 +59,7 @@ public class Room {
         this.room_stmp = room_stmp;
     }
 
-    public Room(int room_id, int room_rid, String room_name, String room_type, Date room_cdate, String room_stmp) {
+    public Room(int room_id, int room_rid, String room_name, String room_type, String room_cdate, String room_stmp) {
         this.room_id = room_id;
         this.room_rid = room_rid;
         this.room_name = room_name;
@@ -79,6 +79,10 @@ public class Room {
         this.room_rid = room_rid;
         this.room_name = room_name;
         this.room_type = room_type;
+    }
+
+    public Room() {
+        super();
     }
 
     @Override

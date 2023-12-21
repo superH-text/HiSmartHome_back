@@ -5,15 +5,15 @@ import java.util.Date;
 public class Users {
 
     private int users_id;
-    private String uesrs_name;
+    private String users_name;
     private String users_username;
-    private String uesrs_password;
+    private String users_password;
     private String users_gender;
-    private String uesrs_age;
+    private String users_age;
     private String users_birthday;
     private String users_phone;
     private String users_email;
-    private Date users_cdate;
+    private String users_cdate;
     private String users_stmp;
 
     public int getUsers_id() {
@@ -24,12 +24,12 @@ public class Users {
         this.users_id = users_id;
     }
 
-    public String getUesrs_name() {
-        return uesrs_name;
+    public String getUsers_name() {
+        return users_name;
     }
 
-    public void setUesrs_name(String uesrs_name) {
-        this.uesrs_name = uesrs_name;
+    public void setUsers_name(String users_name) {
+        this.users_name = users_name;
     }
 
     public String getUsers_username() {
@@ -40,12 +40,12 @@ public class Users {
         this.users_username = users_username;
     }
 
-    public String getUesrs_password() {
-        return uesrs_password;
+    public String getUsers_password() {
+        return users_password;
     }
 
-    public void setUesrs_password(String uesrs_password) {
-        this.uesrs_password = uesrs_password;
+    public void setUsers_password(String users_password) {
+        this.users_password = users_password;
     }
 
     public String getUsers_gender() {
@@ -56,12 +56,12 @@ public class Users {
         this.users_gender = users_gender;
     }
 
-    public String getUesrs_age() {
-        return uesrs_age;
+    public String getUsers_age() {
+        return users_age;
     }
 
-    public void setUesrs_age(String uesrs_age) {
-        this.uesrs_age = uesrs_age;
+    public void setUsers_age(String users_age) {
+        this.users_age = users_age;
     }
 
     public String getUsers_birthday() {
@@ -88,11 +88,11 @@ public class Users {
         this.users_email = users_email;
     }
 
-    public Date getUsers_cdate() {
+    public String getUsers_cdate() {
         return users_cdate;
     }
 
-    public void setUsers_cdate(Date users_cdate) {
+    public void setUsers_cdate(String users_cdate) {
         this.users_cdate = users_cdate;
     }
 
@@ -104,13 +104,13 @@ public class Users {
         this.users_stmp = users_stmp;
     }
 
-    public Users(int users_id, String uesrs_name, String users_username, String uesrs_password, String users_gender, String uesrs_age, String users_birthday, String users_phone, String users_email, Date users_cdate, String users_stmp) {
+    public Users(int users_id, String uesrs_name, String users_username, String uesrs_password, String users_gender, String uesrs_age, String users_birthday, String users_phone, String users_email, String users_cdate, String users_stmp) {
         this.users_id = users_id;
-        this.uesrs_name = uesrs_name;
+        this.users_name = uesrs_name;
         this.users_username = users_username;
-        this.uesrs_password = uesrs_password;
+        this.users_password = uesrs_password;
         this.users_gender = users_gender;
-        this.uesrs_age = uesrs_age;
+        this.users_age = uesrs_age;
         this.users_birthday = users_birthday;
         this.users_phone = users_phone;
         this.users_email = users_email;
@@ -118,15 +118,38 @@ public class Users {
         this.users_stmp = users_stmp;
     }
 
+    public Users(String users_name, String users_username, String users_password, String users_gender, String users_age, String users_birthday, String users_phone, String users_email) {
+        this.users_name = users_name;
+        this.users_username = users_username;
+        this.users_password = users_password;
+        this.users_gender = users_gender;
+        this.users_age = users_age;
+        this.users_birthday = users_birthday;
+        this.users_phone = users_phone;
+        this.users_email = users_email;
+    }
+
+    public Users(String users_username, String users_password, String users_phone, String users_email) {
+        this.users_username = users_username;
+        this.users_password = users_password;
+        this.users_phone = users_phone;
+        this.users_email = users_email;
+    }
+
+    public Users(String users_username, String users_password) {
+        this.users_username = users_username;
+        this.users_password = users_password;
+    }
+
     @Override
     public String toString() {
         return "Users{" +
                 "users_id=" + users_id +
-                ", uesrs_name='" + uesrs_name + '\'' +
+                ", users_name='" + users_name + '\'' +
                 ", users_username='" + users_username + '\'' +
-                ", uesrs_password='" + uesrs_password + '\'' +
+                ", users_password='" + users_password + '\'' +
                 ", users_gender='" + users_gender + '\'' +
-                ", uesrs_age='" + uesrs_age + '\'' +
+                ", users_age='" + users_age + '\'' +
                 ", users_birthday='" + users_birthday + '\'' +
                 ", users_phone='" + users_phone + '\'' +
                 ", users_email='" + users_email + '\'' +

@@ -92,6 +92,10 @@ public class Authorization {
         this.authorization_endtime = authorization_endtime;
     }
 
+    public Authorization() {
+        super();
+    }
+
     @Override
     public String toString() {
         return "Authorization{" +

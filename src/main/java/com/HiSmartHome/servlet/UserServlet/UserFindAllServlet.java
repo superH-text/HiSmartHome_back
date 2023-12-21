@@ -1,16 +1,19 @@
 package com.HiSmartHome.servlet.UserServlet;
 
-import com.HiSmartHome.service.DevicesService;
+import com.HiSmartHome.model.Users;
 import com.HiSmartHome.service.UserService;
 import com.google.gson.Gson;
 
-import javax.servlet.*;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet(name = "UserDelServlet",value = "/uesrdelete")
-public class UserDelServlet extends HttpServlet {
+@WebServlet(name = "UserFindAllServlet",value = "/userfindAll")
+public class UserFindAllServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request,response);
@@ -24,12 +27,9 @@ public class UserDelServlet extends HttpServlet {
 
         UserService userService = new UserService();
 
-        String id = request.getParameter("id");
-        System.out.println(id);
-        //执行删除操作
-        int usersdelete = userService.deleteUsersService(Integer.parseInt(id));
-        Gson gson = new Gson();
-        String json = gson.toJson(usersdelete);
-        response.getWriter().println(json);
+        List<Users> usersList = userService.getAllUsersService();
+        String json_list = new Gson().toJson(usersList);
+        response.getWriter().println(json_list);
+
     }
 }

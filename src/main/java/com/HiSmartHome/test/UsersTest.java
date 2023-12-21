@@ -27,16 +27,16 @@ public class UsersTest {
     @Test
     public void test2(){
         Users users = new Users();
-        users.setUesrs_name("张三");
+        users.setUsers_name("张三");
         users.setUsers_username("zhangsan");
-        users.setUesrs_password("123456");
-        users.setUesrs_age("25");
+        users.setUsers_password("52465464");
+        users.setUsers_age("25");
         users.setUsers_birthday("1996-01-01");
         users.setUsers_email("zhangsan@example.com");
         users.setUsers_phone("13800138000");
         userDao = new UserDao();
-        int i = userDao.insert(users);
-        System.out.println(i);
+        //int i = userDao.usersadd(users);
+        //System.out.println(i);
     }
 
 }

@@ -83,6 +83,10 @@ public class Community {
         this.community_info = community_info;
     }
 
+    public Community() {
+        super();
+    }
+
     @Override
     public String toString() {
         return "Community{" +
